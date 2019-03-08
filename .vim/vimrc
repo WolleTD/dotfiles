@@ -1,0 +1,8 @@
+set nu rnu
+set sw=3 ts=3 et
+set mouse=a
+syntax on
+set background=dark
+"colorscheme solarized
+set laststatus=2
+let g:powerline_pycmd="py3"
