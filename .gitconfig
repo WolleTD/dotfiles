@@ -1,7 +1,16 @@
 [user]
-	email = e.herbertz@insensiv.de
-	name = Eicke Herbertz
+    name = Eicke Herbertz
+    email = wolletd@posteo.de
+
+[color]
+    ui = auto
+
+[merge]
+    tool = bc
+
+[diff]
+    tool = bc
 
 [alias]
-	sg = log --graph --oneline --decorate --all --simplify-by-decoration
-	graph = log --graph --oneline --decorate --all 
+    sg = log --graph --oneline --decorate --all --simplify-by-decoration
+    graph = log --graph --oneline --decorate --all
