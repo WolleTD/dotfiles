@@ -32,6 +32,7 @@ ln -s $DOTFILE_DIR/zshrc .zshrc
 echo "Linking .vimrc"
 ln -s $DOTFILE_DIR/vim/vimrc .vimrc
 echo "Linking $XDG_CONFIG_HOME/git/config"
+mkdir -p $XDG_CONFIG_HOME/git
 ln -s $(realpath --relative-to=$XDG_CONFIG_HOME/git $DOTFILE_DIR)/gitconfig \
     $XDG_CONFIG_HOME/git/config
 # Create ~/.gitconfig so git config --global won't write to $XDG...
