@@ -36,3 +36,7 @@ ln -s $DOTFILE_DIR/vim/vimrc .vimrc
 echo "Linking $XDG_CONFIG_HOME/git/config"
 ln -s $(realpath --relative-to=$XDG_CONFIG_HOME/git $DOTFILE_DIR)/gitconfig \
     $XDG_CONFIG_HOME/git/config
+# Create ~/.gitconfig so git config --global won't write to $XDG...
+touch $HOME/.gitconfig
+echo "Set global git excludesfile in ~/.gitignore"
+git config --global core.excludesfile $(realpath $DOTFILE_DIR)/global-gitignore

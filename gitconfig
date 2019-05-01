@@ -14,3 +14,4 @@
 [alias]
     sg = log --graph --oneline --decorate --all --simplify-by-decoration
     graph = log --graph --oneline --decorate --all
+
