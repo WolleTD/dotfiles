@@ -12,6 +12,8 @@ if [[ -f $HOME/.tmux.conf || -f $HOME/.vimrc || -f $HOME/.zshrc \
     exit 1
 fi
 
+[[ -z $XDG_CONFIG_HOME ]] && XDG_CONFIG_HOME=$HOME/.config
+
 [[ -x $(which zsh) ]] || (echo "Error: zsh not installed!" >&2; exit 1)
 [[ -x $(which vim) ]] || (echo "Error: vim not installed!" >&2; exit 1)
 [[ -x $(which tmux) ]] || (echo "Error: tmux not installed!" >&2; exit 1)
@@ -31,4 +33,6 @@ echo "Linking .zshrc"
 ln -s $DOTFILE_DIR/zshrc .zshrc
 echo "Linking .vimrc"
 ln -s $DOTFILE_DIR/vim/vimrc .vimrc
-
+echo "Linking $XDG_CONFIG_HOME/git/config"
+ln -s $(realpath --relative-to=$XDG_CONFIG_HOME/git $DOTFILE_DIR)/gitconfig \
+    $XDG_CONFIG_HOME/git/config
