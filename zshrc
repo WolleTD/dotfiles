@@ -71,3 +71,6 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="vim"
 
 setopt noautopushd
+
+# Aliases
+alias delete-orig="find . -name '*.orig' -delete"
