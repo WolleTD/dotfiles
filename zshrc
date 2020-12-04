@@ -75,3 +75,4 @@ unsetopt BEEP
 
 # Aliases
 alias delete-orig="find . -name '*.orig' -delete"
+export DOCKER_BUILDKIT=1
