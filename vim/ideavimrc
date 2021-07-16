@@ -1,0 +1,41 @@
+"relative row numbers
+set nu rnu
+
+"search while typing
+set is
+
+"context to show while scrolling
+set so=7
+
+"completion on command-line
+set wildmenu
+
+"show partial command in status line
+set sc
+
+"history size
+set hi=500
+
+"enable mouse support
+set mouse=a
+
+"shiftwidth, tabstop
+set sw=4 ts=4
+
+"expand tabs to spaces
+set et
+
+"smarttab: expand tab always to sw spaces
+set sta
+
+"auto indent, smart indent
+set ai si
+
+"enable syntax higlighting
+syntax on
+
+set background=dark
+
+"enable powerline and use python3
+set laststatus=2
+let g:powerline_pycmd="py3"

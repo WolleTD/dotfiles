@@ -31,6 +31,7 @@ echo "Linking .zshrc"
 ln -s $DOTFILE_DIR/zshrc .zshrc
 echo "Linking .vimrc"
 ln -s $DOTFILE_DIR/vim/vimrc .vimrc
+ln -s $DOTFILE_DIR/vim/ideavimrc .ideavimrc
 echo "Linking $XDG_CONFIG_HOME/git/config"
 mkdir -p $XDG_CONFIG_HOME/git
 ln -s $(realpath --relative-to=$XDG_CONFIG_HOME/git $DOTFILE_DIR)/gitconfig \
