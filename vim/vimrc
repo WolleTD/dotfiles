@@ -39,3 +39,6 @@ set background=dark
 "enable powerline and use python3
 set laststatus=2
 let g:powerline_pycmd="py3"
+
+"go to last position in file
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
