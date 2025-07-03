@@ -41,4 +41,5 @@ set laststatus=2
 let g:powerline_pycmd="py3"
 
 "go to last position in file
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit' && &ft !~# 'rebase'
+    \ | exe "normal! g'\"" | endif
