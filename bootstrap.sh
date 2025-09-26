@@ -25,7 +25,7 @@ popd
 echo "Linking .tmux.conf"
 ln -s $DOTFILE_DIR/tmux/tmux.conf .tmux.conf
 echo "Downloading tmux plugins..."
-tmux new-session sh -c "$DOTFILE_DIR/tmux/plugins/tpm/bin/install_plugins|tee /tmp/dotfiles.log"
+tmux new-session -d sh -c "$DOTFILE_DIR/tmux/plugins/tpm/bin/install_plugins|tee /tmp/dotfiles.log"
 cat /tmp/dotfiles.log
 echo "Linking .zshrc"
 ln -s $DOTFILE_DIR/zshrc .zshrc
