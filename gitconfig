@@ -1,6 +1,12 @@
+[core]
+    excludesfile = ~/.dotfiles/global-gitignore
+
 [user]
     name = Eicke Herbertz
     email = wolletd@posteo.de
+
+[pull]
+    rebase = true
 
 [color]
     ui = auto
@@ -12,6 +18,4 @@
     tool = bc
 
 [alias]
-    sg = log --graph --oneline --decorate --all --simplify-by-decoration
-    graph = log --graph --oneline --decorate --all
-
+    yolo = !git add --all && git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\"
